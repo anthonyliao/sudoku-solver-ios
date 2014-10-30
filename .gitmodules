@@ -1,0 +1,3 @@
+[submodule "sudoku-solver-ios/sudoku-solver-ios/Vendor/XCGLogger"]
+	path = sudoku-solver-ios/sudoku-solver-ios/Vendor/XCGLogger
+	url = https://github.com/DaveWoodCom/XCGLogger.git
