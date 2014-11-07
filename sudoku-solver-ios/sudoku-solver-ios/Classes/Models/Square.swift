@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Square: Printable {
+class Square: Printable, Equatable {
     let x: Int
     let y: Int
     var answers: [Int]
@@ -54,4 +54,8 @@ class Square: Printable {
         return nil
     }
     
+}
+
+func == (lhs: Square, rhs: Square) -> Bool {
+    return lhs.x == rhs.x && lhs.y == rhs.y
 }

@@ -22,20 +22,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         LOG.setup(logLevel: XCGLogger.LogLevel.Debug, showLogLevel: true, showFileNames: true, showLineNumbers: true, writeToFile: nil)
         LOG.info("application started")
         
-        
         var square = [
-            [0,4,0,0,0,0,0,0,0],
-            [0,0,3,0,0,6,0,8,0],
-            [0,0,7,0,9,3,0,0,4],
-            [0,2,5,4,0,0,0,0,0],
-            [9,8,0,0,0,0,0,5,1],
-            [0,0,0,0,0,9,6,2,0],
-            [4,0,0,6,1,0,7,0,0],
-            [0,6,0,2,0,0,1,0,0],
-            [0,0,0,0,0,0,0,3,0]
+            [0,0,0,0,0,6,9,2,0],
+            [0,0,0,7,8,0,0,0,0],
+            [0,7,9,0,5,0,1,0,0],
+            [1,9,0,0,0,0,0,0,0],
+            [0,0,8,0,0,0,3,0,0],
+            [0,0,0,0,0,0,0,7,5],
+            [0,0,1,0,9,0,4,3,0],
+            [0,0,0,0,3,7,0,0,0],
+            [0,3,5,6,0,0,0,0,0]
         ]
-        var solver = Solver(initialSquare: square)
+        var start = NSDate()
+        var solver = Solver(initialArray: square)
         solver.solve()
+        var executionTime = NSDate().timeIntervalSinceDate(start)
+        LOG.info("solved in \(executionTime)")
         return true
     }
 
