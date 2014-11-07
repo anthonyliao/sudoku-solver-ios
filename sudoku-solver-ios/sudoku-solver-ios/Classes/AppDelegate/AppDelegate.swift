@@ -37,7 +37,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var solver = Solver(initialArray: square)
         solver.solve()
         var executionTime = NSDate().timeIntervalSinceDate(start)
-        LOG.info("solved in \(executionTime)")
+        LOG.info("solved in \(executionTime) seconds, processed \(solver.numSolutionsProcessed) possible solutions")
         return true
     }
 

@@ -18,6 +18,7 @@ class Solver: Printable {
     let size: Int
     let squares: [[Square]]
     var invalidPuzzle: Bool
+    var numSolutionsProcessed: Int = 0
     
     init(size: Int) {
         self.size = size
@@ -105,6 +106,8 @@ class Solver: Printable {
             passes++
         } while (zeroInvalidations == false && self.invalidPuzzle == false)
         
+        numSolutionsProcessed++
+        
         if self.invalidPuzzle {
             LOG.info("sudoku puzzle impossible to solve - \(self.invalidPuzzle), invalid")
             return SudokuCodes.Invalid
@@ -124,6 +127,7 @@ class Solver: Printable {
             var solver = Solver(initialSquare: self.getCopy())
             solver.getSquare(chosenSquare.x, y: chosenSquare.y).answers = [answer]
             code = solver.solve()
+            numSolutionsProcessed += solver.numSolutionsProcessed
             if code == SudokuCodes.Solved {
                 break
             } else {
