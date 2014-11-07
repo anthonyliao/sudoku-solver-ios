@@ -16,6 +16,8 @@
 		929782461A0207F0009F3AFC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9219F5241A02043600788089 /* LaunchScreen.xib */; };
 		9297825A1A02088C009F3AFC /* XCGLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 929782501A02083D009F3AFC /* XCGLogger.framework */; };
 		9297825B1A02088C009F3AFC /* XCGLogger.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 929782501A02083D009F3AFC /* XCGLogger.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		929782601A02095C009F3AFC /* Square.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9297825F1A02095C009F3AFC /* Square.swift */; };
+		929782621A028EDE009F3AFC /* Solver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929782611A028EDE009F3AFC /* Solver.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +91,8 @@
 		929781DB1A02075F009F3AFC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		929781DC1A02075F009F3AFC /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		929782471A02083D009F3AFC /* XCGLogger.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = XCGLogger.xcodeproj; path = "sudoku-solver-ios/Vendor/XCGLogger/XCGLogger/Library/XCGLogger.xcodeproj"; sourceTree = "<group>"; };
+		9297825F1A02095C009F3AFC /* Square.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Square.swift; sourceTree = "<group>"; };
+		929782611A028EDE009F3AFC /* Solver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Solver.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +192,8 @@
 		929781D81A02075F009F3AFC /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				9297825F1A02095C009F3AFC /* Square.swift */,
+				929782611A028EDE009F3AFC /* Solver.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -359,7 +365,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				929782601A02095C009F3AFC /* Square.swift in Sources */,
 				929782161A02075F009F3AFC /* AppDelegate.swift in Sources */,
+				929782621A028EDE009F3AFC /* Solver.swift in Sources */,
 				929782171A02075F009F3AFC /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

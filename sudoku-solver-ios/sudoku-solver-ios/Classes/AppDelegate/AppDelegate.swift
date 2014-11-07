@@ -21,6 +21,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         LOG.setup(logLevel: XCGLogger.LogLevel.Debug, showLogLevel: true, showFileNames: true, showLineNumbers: true, writeToFile: nil)
         LOG.info("application started")
+        
+        
+        var square = [
+            [0,4,0,0,0,0,0,0,0],
+            [0,0,3,0,0,6,0,8,0],
+            [0,0,7,0,9,3,0,0,4],
+            [0,2,5,4,0,0,0,0,0],
+            [9,8,0,0,0,0,0,5,1],
+            [0,0,0,0,0,9,6,2,0],
+            [4,0,0,6,1,0,7,0,0],
+            [0,6,0,2,0,0,1,0,0],
+            [0,0,0,0,0,0,0,3,0]
+        ]
+        var solver = Solver(initialSquare: square)
+        solver.solve()
         return true
     }
 
