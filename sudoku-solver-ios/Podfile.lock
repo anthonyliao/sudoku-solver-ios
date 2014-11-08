@@ -1,0 +1,13 @@
+PODS:
+  - UIImageView-Letters (1.0)
+  - YLLongTapShare (0.1)
+
+DEPENDENCIES:
+  - UIImageView-Letters
+  - YLLongTapShare
+
+SPEC CHECKSUMS:
+  UIImageView-Letters: 9f21bca067a6cf8651e104c3b1c9253bc98c9071
+  YLLongTapShare: 98fe22113963b5b7da2366f52db3d7f89399c9ea
+
+COCOAPODS: 0.34.4
